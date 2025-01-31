@@ -1,0 +1,332 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+textarea {
+  width: 300px;
+  height: 380px;
+  margin: 2px;
+  resize: none;
+}
+
+  .checkbox-wrapper-64 input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+  }
+
+  .checkbox-wrapper-64 *,
+  .checkbox-wrapper-64 ::after,
+  .checkbox-wrapper-64 ::before {
+    box-sizing: border-box;
+  }
+
+  /* The switch - the box around the slider */
+  .checkbox-wrapper-64 .switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+  }
+
+  /* Hide default HTML checkbox */
+  .checkbox-wrapper-64 .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .checkbox-wrapper-64 .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    border: 1px solid #adb5bd;
+    transition: .4s;
+    border-radius: 30px;
+  }
+
+  .checkbox-wrapper-64 .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.27em;
+    bottom: 0.25em;
+    background-color: #adb5bd;
+    transition: .4s;
+  }
+
+  .checkbox-wrapper-64 input:checked + .slider {
+    background-color: #007bff;
+    border: 1px solid #007bff;
+  }
+
+  .checkbox-wrapper-64 input:focus + .slider {
+    box-shadow: 0 0 1px #007bff;
+  }
+
+  .checkbox-wrapper-64 input:checked + .slider:before {
+    transform: translateX(1.4em);
+    background-color: #fff;
+  }
+
+  #game-ui-div {
+    background-color: #394050;
+    width: 100%;
+    height: 800px;
+    overflow-y: scroll;
+  }
+
+  .shopOptionDiv {
+    display: flex;
+    margin: 5px;
+    width: 300px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    background: #e2e2e2;
+    border-radius: 5px;
+    padding: 1px 3px;
+  }
+
+  .navbutton {
+    background-color: #6a8bad;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+
+  .navbutton.selected {
+    background-color: #25b7ff;
+  }
+
+  .shopTable {
+    background-color: #44475a;
+    color: #a38782;
+    text-align: center;
+    font-weight: 800;
+    padding: 20px 0px;
+  }
+
+  .shop-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #44475a;
+    color:white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    padding: 10px;
+  }
+  .shop-grid-item {
+    width: 3.5em;
+    height: 3.5em;
+  }
+
+  .shopTableButton {
+    width: 94%;
+    height: 94%;
+    background-image: url(images/ComfyUI_00589_.png);
+    background-size: cover;
+    border-radius: 18%;
+    margin: 3%;
+  }
+
+  .shopTableButton:hover {
+    background-image: #6c6f8b;
+    box-shadow: 0px 0px 3px 2px #a8b1ff85;
+  }
+
+  .shopTableButton.selected {
+    box-shadow: 0px 0px 3px 2px #a8b0ff;
+  }
+
+  td, th {
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr {
+    background-color: #394050;
+    color: rgb(229, 234, 240);
+  }
+  
+  tr:nth-child(even) {
+    background-color: #485062;
+  }
+
+  tr:hover {
+    filter: brightness(1.5);
+  }
+
+  .player-select-row-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .player-select-row {
+    padding: 0.2em 0.5em;
+    background-image: linear-gradient(#474e5f, transparent);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 4px;
+    width: 100%;
+    margin: 0px 2px;
+  }
+
+  .green-button0 {
+    background-color: #75fcbc52;
+    border: 3px solid #75fcbc;
+    color: #76f4b8;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+
+  .green-button0:hover {
+    background-color: #75fcbc7a;
+  }
+
+  .config-entry-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: #44475a;
+    color: white;
+  }
+
+  .config-entry-row:nth-of-type(even) {
+    background-color: #555769;
+  }
+
+  .cancle-config-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5em 1em;
+    color: white;
+    align-items: center;
+  }
+
+  .cancle-config-row > div > span {
+    color: #fc7575;
+    font-weight: bold;
+  }
+
+  .cancle-config-row > div > h3 {
+    margin: 0;
+  }
+
+  .red-button0 {
+    background-color: #fc757552;
+    border: 3px solid #fc7575;
+    color: #f47676;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+
+  .red-button0:hover {
+    background-color: #fc75757a;
+  }
+
+  .tech-card-upper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: #44475a;
+    color: white;
+  }
+
+  .tech-card {
+    border: 2px solid #535367;
+    border-radius: 0.7em;
+    margin: 0.2em 0.5em;
+    padding: 0.9em;
+    display: flex;
+    flex-direction: column;
+    background-color: #2f3242;
+    cursor: pointer;
+    flex-wrap: nowrap;
+  }
+
+  /* .tech-card:hover {
+    background-color: #52535d;
+  } */
+
+  .tech-card img {
+    width: 5em;
+    border-radius: 0.5em;
+  }
+
+  .tech-card h4 {
+    margin: 0 0.2em;
+    padding: 0.2em 0.25em;
+    border-radius: 0.3em;
+    background-color: #a878f5;
+    color: #2f3242;
+  }
+
+  .tech-card span {
+    font-weight: 600;
+    color: #ccb6b2;
+  }
+
+  .tech-card button {
+    background-color: transparent;
+    border: 2px solid #a878f554;
+    color: #a878f5;
+    font-size: 16px;
+    margin: 0.4em 1%;
+    cursor: pointer;
+    padding: 5px 30px;
+    width: 46%;
+  }
+
+  .tech-card button:hover {
+    background-color: #a878f5;
+    color: #2f3242;
+  }
+
+  .monaco-editor { position: absolute !important; }
